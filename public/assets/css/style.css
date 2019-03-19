@@ -20,11 +20,6 @@ ul, form {
     box-shadow: 2px 2px 2px black;
 }
 
-form {
-    position: relative;
-    top: 5.5%;
-}
-
 #order {
     height: 150px;
 }
