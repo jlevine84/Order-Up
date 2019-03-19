@@ -7,6 +7,7 @@ const ouRoutes = require("./controllers/ou_controller")
 
 const PORT = process.env.PORT || 8080;
 
+//Start server
 const app = express();
 
 //Express assets config
