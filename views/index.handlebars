@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <h2>Orders to be Completed:</h2>
+            <br>
+            <ul>
+                {{#each orders}}
+                    {{#unless complete}}
+                        <li>
+                        <h5>Order #: {{id}}</h5>
+                        <p>{{fullorder}}</p>
+                        <button type="submit" class="btn btn-danger delete-order" data-id="{{id}}">Delete Order</button>
+                        <button type="submit" class="btn btn-success complete-order" data-id="{{id}}">Order Complete</button>
+                        </li>
+                        <br>
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-4">
+            <h2>Add an Order!</h2>
+            <form>
+                <div class="form-group">
+                    <label><strong>Order:</strong></label>
+                    <textarea class="form-control" id="order"></textarea>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-4">
+            <h2>Completed Orders:</h2>
+            <br>
+            <ul>
+                {{#each orders}}
+                    {{#if complete}}
+                        <li>
+                        <h5>Order #: {{id}}</h5>
+                        <p>{{fullorder}}</p>
+                        </li>
+                        <br>
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+
